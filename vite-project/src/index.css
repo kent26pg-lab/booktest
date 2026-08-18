@@ -27,7 +27,7 @@ body {
       rgba(255, 226, 168, 0.08),
       transparent 35%
     ),
-    #17100c;
+    #a1420b;
 
   overflow-x: hidden;
 }
@@ -232,63 +232,88 @@ nav a:hover {
 
   position: absolute;
 
-  top: 10px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
+  top: 4px;
+  left: -24px;
+  right: -24px;
+  bottom: -24px;
 
   background:
     radial-gradient(
-      circle at 30% 20%,
-      rgba(255, 255, 255, 0.05),
-      transparent 35%
+      circle at 25% 20%,
+      rgba(255, 214, 153, 0.08),
+      transparent 30%
     ),
     linear-gradient(
       135deg,
-      #4b2d1c,
-      #2b170e 45%,
-      #1c0f09
+      #5a351f 0%,
+      #402416 25%,
+      #2b160d 60%,
+      #1b0d08 100%
     );
 
   border-radius:
-    5px
-    18px
-    18px
-    5px;
+    6px
+    22px
+    22px
+    6px;
 
   box-shadow:
-    0 25px 40px rgba(0, 0, 0, 0.65),
-    inset 0 0 30px rgba(0, 0, 0, 0.5);
+    0 30px 50px rgba(0, 0, 0, 0.7),
+    inset 0 0 35px rgba(0, 0, 0, 0.55),
+    inset 5px 0 10px rgba(255, 210, 150, 0.05);
 
-  z-index: -2;
+  z-index: -3;
 }
 
 
-/* Bokrygg */
+/* Dekorativ kant på omslaget */
+
+.book::before {
+  border:
+    2px solid rgba(118, 77, 42, 0.5);
+
+  outline:
+    1px solid rgba(18, 8, 4, 0.8);
+
+  outline-offset: -8px;
+}
+
+
+/* =========================================
+   BOKRYGG
+========================================= */
 
 .book::after {
   content: "";
 
   position: absolute;
 
-  top: 17px;
-  left: -11px;
-  bottom: -10px;
+  top: 12px;
+  left: -16px;
+  bottom: -14px;
 
-  width: 18px;
+  width: 27px;
 
   background:
     linear-gradient(
       90deg,
-      #1b0d08,
-      #50301c,
-      #25140c
+      #160a06 0%,
+      #2b160d 22%,
+      #603a22 48%,
+      #392016 72%,
+      #180a06 100%
     );
 
-  border-radius: 5px 0 0 5px;
+  border-radius:
+    7px
+    0
+    0
+    7px;
 
   box-shadow:
-    inset 2px 0 rgba(255, 215, 150, 0.08);
+    inset 2px 0 rgba(255, 215, 150, 0.1),
+    inset -3px 0 rgba(0, 0, 0, 0.4),
+    -5px 0 8px rgba(0, 0, 0, 0.3);
 
   z-index: -1;
 }
@@ -316,7 +341,7 @@ nav a:hover {
 
   background:
 
-    /* Papirstruktur */
+    /* Svak papirtekstur */
 
     repeating-linear-gradient(
       0deg,
@@ -339,43 +364,50 @@ nav a:hover {
 
     linear-gradient(
       90deg,
-      #c7b18e,
-      #eadfc9 4%,
-      #f7f0df 12%,
-      #fffaf0 50%,
-      #f6eddc 88%,
-      #d6c09b 98%,
-      #bba17a
+      #bca47d 0%,
+      #d8c5a4 2%,
+      #eee3ce 7%,
+      #f8f0df 15%,
+      #fffaf0 48%,
+      #faf2e2 82%,
+      #e8d7b8 94%,
+      #c4aa80 99%,
+      #aa8c63 100%
     );
 
-  border: 1px solid rgba(80, 50, 20, 0.45);
+  border:
+    1px solid rgba(80, 50, 20, 0.45);
 
   border-radius:
     3px
-    15px
-    15px
+    16px
+    16px
     3px;
 
   box-shadow:
 
-    /* Papirtykkelse */
+    /* Tykkelsen på venstre side */
 
-    -3px 0 #d2bd9b,
+    -2px 0 #ddc9a6,
+    -4px 0 #d2bd99,
     -6px 0 #c5ad87,
-    -9px 0 #b59b74,
-    -12px 0 #9d815d,
+    -8px 0 #b79d75,
+    -10px 0 #a88b64,
 
-    /* Omslag */
+    /* Bokomslag under siden */
 
     10px 12px #321b10,
 
-    /* Skygge */
+    /* Stor skygge */
 
-    18px 25px 40px rgba(0, 0, 0, 0.45),
+    18px 25px 40px rgba(0, 0, 0, 0.5),
 
-    /* Indre skygger */
+    /* Indre skygge ved ryggen */
 
     inset 75px 0 55px -55px rgba(75, 45, 20, 0.38),
+
+    /* Høyre side */
+
     inset -30px 0 35px -30px rgba(80, 50, 20, 0.15);
 
   transform-origin: left center;
@@ -388,6 +420,19 @@ nav a:hover {
     cubic-bezier(0.22, 0.61, 0.36, 1);
 
   isolation: isolate;
+}
+
+
+/* =========================================
+   EKSTRA SIDEKANTER
+========================================= */
+
+.book-page {
+  border-right:
+    2px solid rgba(118, 91, 57, 0.18);
+
+  border-bottom:
+    1px solid rgba(118, 91, 57, 0.2);
 }
 
 
@@ -409,9 +454,9 @@ nav a:hover {
   background:
     linear-gradient(
       90deg,
-      rgba(65, 35, 15, 0.4),
-      rgba(100, 65, 30, 0.22),
-      rgba(255, 255, 255, 0.08),
+      rgba(65, 35, 15, 0.42),
+      rgba(100, 65, 30, 0.25),
+      rgba(255, 255, 255, 0.1),
       transparent
     );
 
@@ -452,7 +497,8 @@ nav a:hover {
     );
 
   box-shadow:
-    inset -2px 0 rgba(80, 50, 25, 0.15);
+    inset -2px 0 rgba(80, 50, 25, 0.15),
+    -2px 0 3px rgba(80, 50, 25, 0.08);
 
   pointer-events: none;
 }
@@ -469,7 +515,9 @@ nav a:hover {
 }
 
 
-/* Overskrift */
+/* =========================================
+   OVERSKRIFT
+========================================= */
 
 .book-page h1 {
   max-width: 700px;
@@ -495,10 +543,15 @@ nav a:hover {
   line-height: 1.05;
 
   letter-spacing: -0.035em;
+
+  text-shadow:
+    1px 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 
-/* Dekorativ linje */
+/* =========================================
+   DEKORATIV LINJE
+========================================= */
 
 .book-page h1::after {
   content: "";
@@ -510,11 +563,19 @@ nav a:hover {
 
   margin-top: 22px;
 
-  background: #a6814c;
+  background:
+    linear-gradient(
+      90deg,
+      #a6814c,
+      #c5a56a,
+      transparent
+    );
 }
 
 
-/* Tekst */
+/* =========================================
+   TEKST
+========================================= */
 
 .book-page p {
   max-width: 650px;
@@ -524,6 +585,26 @@ nav a:hover {
   font-size: 1.12rem;
 
   line-height: 1.9;
+}
+
+
+/* =========================================
+   LENKER PÅ SIDEN
+========================================= */
+
+.book-page a {
+  color: #67452c;
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 4px;
+
+  transition:
+    color 0.2s ease;
+}
+
+.book-page a:hover {
+  color: #302015;
 }
 
 
@@ -542,11 +623,13 @@ nav a:hover {
 
   display: flex;
   align-items: center;
+
   gap: 12px;
 
   padding: 10px 14px;
 
   border: none;
+
   background: transparent;
 
   color: #56351f;
@@ -558,6 +641,7 @@ nav a:hover {
     cursive;
 
   font-size: 1.4rem;
+
   font-weight: normal;
 
   letter-spacing: 0.03em;
@@ -585,6 +669,7 @@ nav a:hover {
   display: inline-block;
 
   font-size: 1.8rem;
+
   font-weight: normal;
 
   transform:
@@ -618,7 +703,8 @@ nav a:hover {
   right: 0;
   bottom: 0;
 
-  border: 2px solid #56351f;
+  border:
+    2px solid #56351f;
 
   border-radius:
     48%
@@ -653,7 +739,7 @@ nav a:hover {
 }
 
 
-/* Tegn rundt teksten */
+/* Tegnet rundt teksten */
 
 .back-to-top:hover::before {
   opacity: 0.7;
@@ -751,6 +837,7 @@ nav a:hover {
 
   .book {
     width: 94%;
+
     height: 500px;
 
     margin-top: 70px;
@@ -774,6 +861,7 @@ nav a:hover {
 
   .back-to-top {
     right: 25px;
+
     bottom: 25px;
 
     font-size: 1.15rem;
